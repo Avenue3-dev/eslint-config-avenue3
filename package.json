@@ -2,6 +2,7 @@
   "name": "eslint-config-avenue3",
   "version": "0.0.3",
   "description": "A collection of ESLint configurations for Avenue3 projects.",
+  "private": false,
   "main": "index.js",
   "repository": {
     "type": "git",

@@ -1,7 +1,9 @@
 {
-  "github": {
-    "release": true,
+  "git": {
     "commitMessage": "chore: release ${version}"
+  },
+  "github": {
+    "release": true
   },
   "npm": {
     "publish": false

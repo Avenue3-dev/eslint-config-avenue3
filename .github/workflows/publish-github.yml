@@ -1,0 +1,39 @@
+name: Publish to GitHub
+
+on:
+  release:
+    types: [created]
+
+env:
+  HUSKY: 0
+
+jobs:
+  publish-to-github:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+          scope: '@avenue3-dev'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          cat << EOF >> "./.npmrc"
+            //npm.pkg.github.com/:_authToken=${NPM_TOKEN}
+            @avenue3-dev:registry=https://npm.pkg.github.com
+            always-auth=true
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

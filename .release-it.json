@@ -1,6 +1,10 @@
 {
   "github": {
-    "release": true
+    "release": true,
+    "commitMessage": "chore: release ${version}"
+  },
+  "npm": {
+    "publish": false
   },
   "plugins": {
     "@release-it/conventional-changelog": {

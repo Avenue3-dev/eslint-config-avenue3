@@ -1,0 +1,5 @@
+.eslintrc.cjs
+.github/dependabot.yml
+.husky/
+commitlint.config.cjs
+prettier.config.cjs

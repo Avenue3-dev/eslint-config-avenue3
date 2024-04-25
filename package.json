@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-avenue3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of ESLint configurations for Avenue3 projects.",
   "main": "index.js",
   "repository": {

@@ -13,8 +13,15 @@ npm install --save-dev @avenue3-dev/eslint-config
 ### Node
 
 ```js
-// .eslintrc.js
-{
+// .eslintrc.cjs
+
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   extends: ['@avenue3-dev/eslint-config'],
 };
 ```
@@ -22,12 +29,16 @@ npm install --save-dev @avenue3-dev/eslint-config
 ### React
 
 ```js
-// .eslintrc.js
-{
-  extends: ['@avenue3-dev/eslint-config/react'],
+// .eslintrc.cjs
+
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: {
     project: './tsconfig.json',
   },
+  extends: ['@avenue3-dev/eslint-config/react'],
 };
 ```
 

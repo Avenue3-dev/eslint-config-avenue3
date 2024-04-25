@@ -14,6 +14,7 @@ npm install --save-dev @avenue3-dev/eslint-config
 
 ```js
 // .eslintrc.js
+
 {
   extends: ['@avenue3-dev/eslint-config'],
 };
@@ -23,11 +24,26 @@ npm install --save-dev @avenue3-dev/eslint-config
 
 ```js
 // .eslintrc.js
+
 {
   extends: ['@avenue3-dev/eslint-config/react'],
   parserOptions: {
     project: './tsconfig.json',
   },
+};
+```
+
+## Prettier
+
+```js
+//prettier.config.cjs
+
+/** @type {import("prettier").Config} */
+module.exports = {
+  trailingComma: 'es5',
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
 };
 ```
 

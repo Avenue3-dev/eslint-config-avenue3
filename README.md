@@ -1,11 +1,11 @@
-<h1 align="center">eslint-config-avenue3</h1>
+<h1 align="center">@avenue3-dev/eslint-config</h1>
 
-This package provides Avenue3's .eslintrc as an extensible shared config.
+A collection of ESLint configurations for Avenue3 projects. This uses the Airbnb configuration as a base and adds some additional rules and configurations.
 
 ## Installation
 
 ```bash
-npm install --save-dev eslint-config-avenue3
+npm install --save-dev @avenue3-dev/eslint-config
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save-dev eslint-config-avenue3
 ```js
 // .eslintrc.js
 {
-  extends: ['avenue3'],
+  extends: ['@avenue3-dev/eslint-config'],
 };
 ```
 
@@ -24,7 +24,7 @@ npm install --save-dev eslint-config-avenue3
 ```js
 // .eslintrc.js
 {
-  extends: ['avenue3/react'],
+  extends: ['@avenue3-dev/eslint-config/react'],
   parserOptions: {
     project: './tsconfig.json',
   },

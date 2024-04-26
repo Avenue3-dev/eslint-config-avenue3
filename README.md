@@ -2,10 +2,15 @@
 
 A collection of ESLint configurations for Avenue3 projects. This uses the Airbnb configuration as a base and adds some additional rules and configurations.
 
+This configuration is intended to be used with TypeScript projects.
+
 ## Installation
 
 ```bash
-npm install --save-dev @avenue3-dev/eslint-config
+npm install @avenue3-dev/eslint-config \
+            @typescript-eslint/eslint-plugin@^7.2.0 \
+            @typescript-eslint/parser@^7.2.0 \
+            --save-dev
 ```
 
 ## Usage
@@ -44,6 +49,8 @@ module.exports = {
 
 ## Prettier
 
+We use Prettier as our code formatter and have a default configuration that we use across all projects. You can use this configuration by creating a `prettier.config.cjs` file in the root of your project.
+
 ```js
 //prettier.config.cjs
 
@@ -53,6 +60,7 @@ module.exports = {
   tabWidth: 2,
   semi: true,
   singleQuote: true,
+  printWidth: 120,
 };
 ```
 

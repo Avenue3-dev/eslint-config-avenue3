@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.0.2...1.1.0) (2024-06-07)
+
+
+### Features
+
+* decrease max line length to 80 ([#4](https://github.com/Avenue3-dev/eslint-config-avenue3/issues/4)) ([6fac100](https://github.com/Avenue3-dev/eslint-config-avenue3/commit/6fac1005a63f9fc386344e7f62300a0be9887dd8))
+
+
+### Bug Fixes
+
+* backticks being allowed when not using string interpolation ([#3](https://github.com/Avenue3-dev/eslint-config-avenue3/issues/3)) ([efffd55](https://github.com/Avenue3-dev/eslint-config-avenue3/commit/efffd553fd8d076801860f87201cfad22e29054d))
+* update react/jsx-key rule to enforce keys for fragments ([#5](https://github.com/Avenue3-dev/eslint-config-avenue3/issues/5)) ([055180c](https://github.com/Avenue3-dev/eslint-config-avenue3/commit/055180c88c4a3555d8d988d16d26fec52a97fd20))
+
 ## [1.0.2](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.0.1...1.0.2) (2024-04-26)
 
 

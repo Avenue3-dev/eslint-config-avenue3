@@ -29,6 +29,15 @@ jobs:
           cache: 'pnpm'
           cache-dependency-path: './pnpm-lock.yaml'
 
+      - run: |
+          cat << EOF >> "./.npmrc"
+            //registry.npmjs.org/:_authToken=${NPM_TOKEN}
+            @avenue3-dev:registry=https://registry.npmjs.org
+            always-auth=true
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm publish --access public --no-git-checks

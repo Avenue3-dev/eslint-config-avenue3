@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.1.1](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.1.0...1.1.1) (2024-06-07)
+
 ## [1.1.0](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.0.2...1.1.0) (2024-06-07)
 
 

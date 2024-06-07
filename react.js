@@ -26,5 +26,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/jsx-key': ['error', { checkFragmentShorthand: true }],
   },
 };

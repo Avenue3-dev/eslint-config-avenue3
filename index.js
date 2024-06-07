@@ -10,6 +10,10 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-default-export': 'error',
     'import/prefer-default-export': 'off',
-    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: false },
+    ],
   },
 };

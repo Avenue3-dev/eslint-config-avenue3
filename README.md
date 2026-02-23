@@ -1,61 +1,52 @@
 <h1 align="center">@avenue3-dev/eslint-config</h1>
 
-A collection of ESLint configurations for Avenue3 projects. This uses the Airbnb configuration as a base and adds some additional rules and configurations.
+A collection of ESLint v9 flat configurations for Avenue3 projects. Includes TypeScript, Prettier, and import sorting rules out of the box.
 
 This configuration is intended to be used with TypeScript projects.
+
+## Requirements
+
+- ESLint `>=9.0.0`
+- TypeScript `>=5.0.0`
+- Prettier `>=3.0.0`
 
 ## Installation
 
 ```bash
-npm install @avenue3-dev/eslint-config \
-            @typescript-eslint/eslint-plugin@^7.2.0 \
-            @typescript-eslint/parser@^7.2.0 \
-            --save-dev
+npm install --save-dev @avenue3-dev/eslint-config eslint typescript prettier
 ```
 
 ## Usage
 
-### Node
+### Node / General
 
 ```js
-// .eslintrc.cjs
+// eslint.config.js
 
-module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: {
-    project: './tsconfig.json',
-  },
-  extends: ['@avenue3-dev/eslint-config'],
-};
+import avenueConfig from '@avenue3-dev/eslint-config';
+
+export default [{ ignores: ['dist'] }, ...avenueConfig];
 ```
 
 ### React
 
 ```js
-// .eslintrc.cjs
+// eslint.config.js
 
-module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: {
-    project: './tsconfig.json',
-  },
-  extends: ['@avenue3-dev/eslint-config/react'],
-};
+import avenueReactConfig from '@avenue3-dev/eslint-config/react';
+
+export default [{ ignores: ['dist'] }, ...avenueReactConfig];
 ```
 
 ## Prettier
 
-We use Prettier as our code formatter and have a default configuration that we use across all projects. You can use this configuration by creating a `prettier.config.cjs` file in the root of your project.
+We use Prettier as our code formatter and have a default configuration that we use across all projects. You can use this configuration by creating a `prettier.config.js` file in the root of your project.
 
 ```js
-//prettier.config.cjs
+// prettier.config.js
 
 /** @type {import("prettier").Config} */
-module.exports = {
+export default {
   trailingComma: 'es5',
   tabWidth: 2,
   semi: true,

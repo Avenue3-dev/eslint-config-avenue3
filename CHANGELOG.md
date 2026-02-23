@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.1.4...2.0.0) (2026-02-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop ESLint v8 eslintrc format and airbnb ruleset.
+Rewrite configs as ESLint v9 flat config using typescript-eslint,
+eslint-plugin-import, simple-import-sort, prettier, jsx-a11y,
+react-hooks, react-refresh, and barrel-files.
+
+Consumers must migrate from .eslintrc.* to eslint.config.js.
+See README for updated installation and usage.
+
+### Features
+
+* migrate to ESLint v9 flat config ([81d1037](https://github.com/Avenue3-dev/eslint-config-avenue3/commit/81d1037cd7c804fa6c0e496a4b1c13bf2153da26))
+
 ## [1.1.4](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.1.3...1.1.4) (2024-06-07)
 
 ## [1.1.3](https://github.com/Avenue3-dev/eslint-config-avenue3/compare/1.1.2...1.1.3) (2024-06-07)

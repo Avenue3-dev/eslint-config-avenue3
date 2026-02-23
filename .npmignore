@@ -1,6 +1,0 @@
-.eslintrc.cjs
-.github/
-.husky/
-.release-it.json
-commitlint.config.cjs
-prettier.config.cjs
